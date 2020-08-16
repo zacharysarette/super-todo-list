@@ -89,7 +89,7 @@ function App() {
       </div>
       <br />
       <main className='todoMain'>
-        { currentPage != 'Completed' &&
+        { currentPage !== 'Completed' &&
           <>
             <input className='addInput' id='todoInput' ref={todoNameRef} type="text" />
             <button className='addButton' onClick={handleAddTodo}>Add Todo</button>
