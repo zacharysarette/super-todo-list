@@ -159,4 +159,13 @@ footer {
   line-height: 17px;
   color: #A9A9A9;
 }
+@media only screen and (max-width: 400px) {
+  footer, header, .addButton, .deleteAllButton, .navBar, .addInput, .todoMain, .todoContent {
+    width: 100%;
+    margin-top:15px;
+  }
+  footer {
+    margin-bottom: 50px;
+  }
+}
 
