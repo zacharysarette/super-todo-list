@@ -92,7 +92,7 @@ function App() {
         {currentPage !== 'Completed' &&
           <>
             <input className='input input--large' ref={todoNameRef} type="text" />
-            <button className='button button--primary' onClick={handleAddTodo}>Add Todo</button>
+            <button className='button button--primary button--right' onClick={handleAddTodo}>Add Todo</button>
             <br />
             <br />
           </>
