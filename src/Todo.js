@@ -1,22 +1,33 @@
 import React from 'react'
 
-export default function Todo({ todo, toggleTodo }) {
+export default function Todo({ todo, toggleTodo, removeTodo }) {
   function handleTodoClick() {
     toggleTodo(todo.id)
   }
 
+  function handleDeleteClick() {
+    removeTodo(todo.id)
+  }
+
   return (
-    <div>
+    <div className='todoLine'>
       <label>
         <input
-          className="checkBox"
-          type="checkbox"
+          className='checkBox'
+          type='checkbox'
           checked={todo.complete}
           onChange={handleTodoClick}
         />
-        {todo.name}
-        <i class="material-icons delete">delete_outline</i>
+        <span className={ todo.complete && 'lineThrough'}>
+          {todo.name}
+        </span>
       </label>
+      <i
+        className='material-icons delete noSelect'
+        onClick={handleDeleteClick}
+      >
+        delete_outline
+      </i>
     </div>
   )
 }

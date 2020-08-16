@@ -18,16 +18,18 @@ button, input {
   font-size: 14px;
   line-height: 17px;
 }
-.mainNav:hover, .mainNav:focus {
- border-bottom: 2px solid #6DA6F2;
+.mainNav:hover > div, .navIndicator {
+ background: #6DA6F2;
+ height: 2px;
  border-radius: 4px 4px 0px 0px;
+ margin-top:10px;
+ padding-top: 4px;
 }
 .navBar {
   display:grid;
   grid-template-columns: auto auto auto;
   margin: auto;
   width: 600px;
-  height: 30px;
   border-bottom: 1px solid #BDBDBD;
   text-align: center;
 }
@@ -67,11 +69,14 @@ button, input {
   background: #70aeff;
 }
 .todoMain {
+  clear: both;
   margin: auto;
   width: 600px;
+  min-height: 100vh;
 }
 .todoContent {
-  margin: auto;
+  display: inline-block;
+  clear: both;
   width: 600px;
   font-family: Montserrat;
   font-style: normal;
@@ -79,6 +84,9 @@ button, input {
   font-size: 18px;
   line-height: 22px;
   color: #000000;
+}
+.todoLine {
+  margin-top: 20px;
 }
 .checkBox {
   border: 1px solid #828282;
@@ -92,7 +100,63 @@ button, input {
   vertical-align: text-bottom;
   font-size: 24px;
   padding-right: 10px;
+  cursor: pointer;
+  
 }
 .delete:hover, .delete:focus {
-  color: #6DA6F2;
+  color: #F18989;
 }
+.deleteAllButton {
+  display: block;
+  float: right;
+  background: #F18989;
+  border-radius: 4px;
+  border:0px;
+  width: 124px;
+  height: 40px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color:#fff
+}
+.deleteAllButton:hover, .deleteAllButton:focus {
+  background: #F18989;
+}
+.deleteAllIcon {
+  vertical-align: text-top;
+  font-size: 16px;
+  margin-right: 5px;
+}
+.lineThrough {
+  text-decoration: line-through;
+}
+.noSelect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+header {
+  width: 600px;
+  margin:auto;
+}
+footer {
+  position: relative;
+  width: 600px;
+  height: 20px;
+  bottom: 0px;
+  margin:auto;
+  text-align: center;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #A9A9A9;
+}
+
