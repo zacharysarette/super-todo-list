@@ -121,7 +121,7 @@ function App() {
         </content>
 
       </main>
-      <footer>
+      <footer className='footer'>
         Zachary Sarette &copy; 2020
       </footer>
     </>
