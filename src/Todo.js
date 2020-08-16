@@ -18,7 +18,7 @@ export default function Todo({ todo, toggleTodo, removeTodo }) {
           checked={todo.complete}
           onChange={handleTodoClick}
         />
-        <span className={ todo.complete && 'lineThrough'}>
+        <span className={ todo.complete ? 'lineThrough' : ''}>
           {todo.name}
         </span>
       </label>

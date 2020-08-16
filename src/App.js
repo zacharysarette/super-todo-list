@@ -70,21 +70,21 @@ function App() {
           onClick={() => handleNavClick('All')}
         >
           All
-          <div className={ currentPage === 'All' && 'navIndicator'}></div>
+          <div className={ currentPage === 'All' ? 'navIndicator' : ''}></div>
         </nav>
         <nav
           className='mainNav'
           onClick={() => handleNavClick('Active')}
         >
           Active
-          <div className={ currentPage === 'Active' && 'navIndicator'}></div>
+          <div className={ currentPage === 'Active' ? 'navIndicator' : ''}></div>
         </nav>
         <nav
           className='mainNav'
           onClick={() => handleNavClick('Completed')}
         >
           Completed
-          <div className={ currentPage === 'Completed' && 'navIndicator'}></div>
+          <div className={ currentPage === 'Completed' ? 'navIndicator' : ''}></div>
         </nav>
       </div>
       <br />
@@ -110,9 +110,9 @@ function App() {
           <TodoList
             todos={(() => {
               switch(currentPage) {
-                case 'All': return todos;
-                case 'Active': return todos.filter(t => t.complete === false)
-                case 'Completed': return todos.filter(t => t.complete === true)
+                case 'Active': return todos.filter(t => t.complete === false);
+                case 'Completed': return todos.filter(t => t.complete === true);
+                default: return todos;
               }
             })()}
             toggleTodo={toggleTodo}
