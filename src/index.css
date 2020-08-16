@@ -1,35 +1,80 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Raleway:ital@1&display=swap');
-button, input {
-  outline: none
+.header {
+  width: 600px;
+  margin:auto;
 }
-.mainHeader {
+.h1 {
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
+}
+.h1--title {
   font-size: 36px;
   line-height: 42px;
+}
+.h1--center {
   text-align: center;
 }
-.mainNav {
+.button {
   font-family: Montserrat;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
-  border:0px;
+  border: none;
   text-decoration: none;
   outline: none;
+}
+.button--primary {
+  width: 109px;
+  height: 56px;
+  background: #6DA6F2;
+  box-shadow: 0px 2px 6px rgba(127, 177, 243, 0.4);
+  border-radius: 12px;
+  color: #FFFFFF;
+}
+.button--primary:hover, .button--primary:focus {
+  background: #70aeff;
+}
+.button__tab {
   background: none;
 }
-.mainNav:hover > div, .navIndicator {
+.button__tab:hover > div, .div__indicator {
  background: #6DA6F2;
  height: 2px;
  border-radius: 4px 4px 0px 0px;
  margin-top:10px;
  padding-top: 4px;
 }
-.navBar {
+.button--right {
+  float: right;
+}
+.button--delete-icon {
+  float: right;
+  background: none;
+  color: #BDBDBD;
+  vertical-align: text-bottom;
+  font-size: 24px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+.button--delete-icon:hover, .button--delete-icon:focus {
+  color: #F18989;
+}
+.button--delete {
+  display: block;
+  float: right;
+  background: #F18989;
+  border-radius: 4px;
+  width: 124px;
+  height: 40px;
+  color: #fff;
+}
+.button--delete:hover, .button--delete:focus {
+  background: #F18989;
+}
+.nav__tabs {
   display:grid;
   grid-template-columns: auto auto auto;
   margin: auto;
@@ -37,48 +82,33 @@ button, input {
   border-bottom: 1px solid #BDBDBD;
   text-align: center;
 }
-.addInput {
-  padding-left: 12px;
+.input {
   border: 1px solid #BDBDBD;
   box-sizing: border-box;
   border-radius: 12px;
-  width: 476px;
-  height: 56px;
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;
   color: #828282;
+  outline: none;
 }
-.addInput:hover, .addInput:focus {
+.input:hover, .input:focus {
   border: 1px solid #6DA6F2
 }
-.addButton {
-  float: right;
-  width: 109px;
+.input--large {
+  padding-left: 12px;
+  width: 476px;
   height: 56px;
-  background: #6DA6F2;
-  box-shadow: 0px 2px 6px rgba(127, 177, 243, 0.4);
-  border-radius: 12px;
-  border: 0px;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
-  color: #FFFFFF;
 }
-.addButton:hover, .addButton:focus {
-  background: #70aeff;
-}
-.todoMain {
+.main {
   clear: both;
   margin: auto;
   width: 600px;
   min-height: 100vh;
 }
-.todoContent {
+.content {
   display: inline-block;
   clear: both;
   width: 600px;
@@ -89,8 +119,11 @@ button, input {
   line-height: 22px;
   color: #000000;
 }
-.todoLine {
+.item {
   margin-top: 20px;
+}
+.span--line-through {
+  text-decoration: line-through;
 }
 .checkBox {
   border: 1px solid #828282;
@@ -98,45 +131,12 @@ button, input {
   border-radius: 4px;
   margin-right: 10px;
 }
-.delete {
-  float: right;
-  color: #BDBDBD;
-  vertical-align: text-bottom;
-  font-size: 24px;
-  padding-right: 10px;
-  cursor: pointer;
-  
-}
-.delete:hover, .delete:focus {
-  color: #F18989;
-}
-.deleteAllButton {
-  display: block;
-  float: right;
-  background: #F18989;
-  border-radius: 4px;
-  border:0px;
-  width: 124px;
-  height: 40px;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 15px;
-  color:#fff
-}
-.deleteAllButton:hover, .deleteAllButton:focus {
-  background: #F18989;
-}
-.deleteAllIcon {
+.icon--delete {
   vertical-align: text-top;
   font-size: 16px;
   margin-right: 5px;
 }
-.lineThrough {
-  text-decoration: line-through;
-}
-.noSelect {
+.icon--no-select {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -145,11 +145,7 @@ button, input {
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
-header {
-  width: 600px;
-  margin:auto;
-}
-footer {
+.footer {
   position: relative;
   width: 600px;
   height: 20px;
@@ -164,11 +160,12 @@ footer {
   color: #A9A9A9;
 }
 @media only screen and (max-width: 400px) {
-  footer, header, .addButton, .deleteAllButton, .navBar, .addInput, .todoMain, .todoContent {
+  .footer, .header, .input--large, .button--delete, .nav__tabs, .button--primary, .main, .content {
     width: 100%;
+    margin: 0px;
     margin-top:15px;
   }
-  footer {
+  .footer {
     margin-bottom: 50px;
   }
 }

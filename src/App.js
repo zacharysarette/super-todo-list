@@ -60,39 +60,39 @@ function App() {
 
   return (
     <>
-      <header>
-        <h1 className='mainHeader'>Super Todo List</h1>
+      <header className='header'>
+        <h1 className='h1 h1--title h1--center'>Super Todo List</h1>
       </header>
       <br />
-      <nav className='navBar'>
+      <nav className='nav__tabs'>
         <button
-          className='mainNav'
+          className='button button__tab'
           onClick={() => handleNavClick('All')}
         >
           All
-          <div className={currentPage === 'All' ? 'navIndicator' : ''}></div>
+          <div className={currentPage === 'All' ? 'div__indicator' : ''}></div>
         </button>
         <button
-          className='mainNav'
+          className='button button__tab'
           onClick={() => handleNavClick('Active')}
         >
           Active
-          <div className={currentPage === 'Active' ? 'navIndicator' : ''}></div>
+          <div className={currentPage === 'Active' ? 'div__indicator' : ''}></div>
         </button>
         <button
-          className='mainNav'
+          className='button button__tab'
           onClick={() => handleNavClick('Completed')}
         >
           Completed
-          <div className={currentPage === 'Completed' ? 'navIndicator' : ''}></div>
+          <div className={currentPage === 'Completed' ? 'div__indicator' : ''}></div>
         </button>
       </nav>
       <br />
-      <main className='todoMain'>
+      <main className='main'>
         {currentPage !== 'Completed' &&
           <>
-            <input className='addInput' ref={todoNameRef} type="text" />
-            <button className='addButton' onClick={handleAddTodo}>Add Todo</button>
+            <input className='input input--large' ref={todoNameRef} type="text" />
+            <button className='button button--primary' onClick={handleAddTodo}>Add Todo</button>
             <br />
             <br />
           </>
@@ -100,13 +100,13 @@ function App() {
         {currentPage === 'Completed' && todos.filter(t => t.complete === true).length > 0 &&
           <button
             onClick={handleClearTodos}
-            className='deleteAllButton'
+            className='button button--delete'
           >
-            <i className='material-icons deleteAllIcon'>delete_outline</i>
+            <i className='material-icons icon--delete'>delete_outline</i>
             Delete All
           </button>
         }
-        <content className='todoContent'>
+        <content className='content'>
           <TodoList
             todos={(() => {
               switch (currentPage) {

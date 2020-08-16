@@ -10,7 +10,7 @@ export default function Todo({ todo, toggleTodo, removeTodo }) {
   }
 
   return (
-    <div className='todoLine'>
+    <article className='item'>
       <label>
         <input
           className='checkBox'
@@ -18,16 +18,18 @@ export default function Todo({ todo, toggleTodo, removeTodo }) {
           checked={todo.complete}
           onChange={handleTodoClick}
         />
-        <span className={ todo.complete ? 'lineThrough' : ''}>
+        <span className={ todo.complete ? 'span--line-through' : ''}>
           {todo.name}
         </span>
       </label>
-      <i
-        className='material-icons delete noSelect'
-        onClick={handleDeleteClick}
-      >
-        delete_outline
-      </i>
-    </div>
+      <button className='button button--delete-icon'>
+        <i
+          className='material-icons noSelect'
+          onClick={handleDeleteClick}
+        >
+          delete_outline
+        </i>
+      </button>
+    </article>
   )
 }
