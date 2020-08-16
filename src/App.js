@@ -21,7 +21,7 @@ function App() {
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos))
   }, [todos])
-    
+
   function toggleTodo(id) {
     const newTodos = [...todos]
     const todo = newTodos.find(todo => todo.id === id)
@@ -43,10 +43,10 @@ function App() {
     const name = todoNameRef.current.value
     if (name === '') return
     setTodos(prevTodos => {
-      return [...prevTodos, { id: uuidv4(), name: name, complete: false}]
+      return [...prevTodos, { id: uuidv4(), name: name, complete: false }]
     })
     todoNameRef.current.value = null
-    document.getElementById('todoInput').focus();
+    todoNameRef.current.focus();
   }
 
   function handleClearTodos(e) {
@@ -64,40 +64,40 @@ function App() {
         <h1 className='mainHeader'>Super Todo List</h1>
       </header>
       <br />
-      <div className='navBar'>
-        <nav
+      <nav className='navBar'>
+        <button
           className='mainNav'
           onClick={() => handleNavClick('All')}
         >
           All
-          <div className={ currentPage === 'All' ? 'navIndicator' : ''}></div>
-        </nav>
-        <nav
+          <div className={currentPage === 'All' ? 'navIndicator' : ''}></div>
+        </button>
+        <button
           className='mainNav'
           onClick={() => handleNavClick('Active')}
         >
           Active
-          <div className={ currentPage === 'Active' ? 'navIndicator' : ''}></div>
-        </nav>
-        <nav
+          <div className={currentPage === 'Active' ? 'navIndicator' : ''}></div>
+        </button>
+        <button
           className='mainNav'
           onClick={() => handleNavClick('Completed')}
         >
           Completed
-          <div className={ currentPage === 'Completed' ? 'navIndicator' : ''}></div>
-        </nav>
-      </div>
+          <div className={currentPage === 'Completed' ? 'navIndicator' : ''}></div>
+        </button>
+      </nav>
       <br />
       <main className='todoMain'>
-        { currentPage !== 'Completed' &&
+        {currentPage !== 'Completed' &&
           <>
-            <input className='addInput' id='todoInput' ref={todoNameRef} type="text" />
+            <input className='addInput' ref={todoNameRef} type="text" />
             <button className='addButton' onClick={handleAddTodo}>Add Todo</button>
             <br />
             <br />
           </>
         }
-        { currentPage === 'Completed' && todos.filter(t => t.complete === true).length > 0 &&
+        {currentPage === 'Completed' && todos.filter(t => t.complete === true).length > 0 &&
           <button
             onClick={handleClearTodos}
             className='deleteAllButton'
@@ -109,7 +109,7 @@ function App() {
         <content className='todoContent'>
           <TodoList
             todos={(() => {
-              switch(currentPage) {
+              switch (currentPage) {
                 case 'Active': return todos.filter(t => t.complete === false);
                 case 'Completed': return todos.filter(t => t.complete === true);
                 default: return todos;

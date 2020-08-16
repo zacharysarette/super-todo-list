@@ -17,6 +17,10 @@ button, input {
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
+  border:0px;
+  text-decoration: none;
+  outline: none;
+  background: none;
 }
 .mainNav:hover > div, .navIndicator {
  background: #6DA6F2;
