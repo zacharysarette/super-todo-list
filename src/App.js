@@ -40,7 +40,7 @@ const App = () => {
       <main className='main'>
       <TopBar
         currentPage={currentPage}
-        todosEmty={() => todosEmpty()}
+        todosEmpty={() => todosEmpty()}
         setTodos={setTodos}
         clearTodos={handleClearTodos}
       />

@@ -21,7 +21,6 @@ const TopBar = ({currentPage, todosEmpty, setTodos, clearTodos}) => {
     return
   }
 
-
   document.addEventListener('keyup', (e) => {
     if (e.code === "Enter") handleAddTodo()
   })
@@ -39,7 +38,7 @@ const TopBar = ({currentPage, todosEmpty, setTodos, clearTodos}) => {
             <br />
           </>
         }
-        {currentPage === 'Completed' && todosEmpty &&
+        {currentPage === 'Completed' && todosEmpty() &&
           <ButtonDelete text={deleteAll} onClick={() => clearTodos()} />
         }
     </>
