@@ -29,50 +29,53 @@
 .button--primary {
   width: 109px;
   height: 56px;
-  background: #6DA6F2;
+  background: #2d5cc2;
   box-shadow: 0px 2px 6px rgba(127, 177, 243, 0.4);
   border-radius: 12px;
   color: #FFFFFF;
 }
 .button--primary:hover, .button--primary:focus {
-  background: #70aeff;
+  background: #5f93d8;
 }
 .button__tab {
   background: none;
 }
 .button__tab:hover > div, .div__indicator {
- background: #6DA6F2;
- height: 2px;
- border-radius: 4px 4px 0px 0px;
- margin-top:10px;
- padding-top: 4px;
+  background: #2d5cc2;
+  height: 2px;
+  border-radius: 4px 4px 0px 0px;
+  margin-top:10px;
+  margin-bottom:-1px;
+  padding-top: 4px;
 }
 .button--right {
   float: right;
 }
+.button--text-right {
+  text-align: right;
+}
 .button--delete-icon {
-  float: right;
   background: none;
-  color: #BDBDBD;
+  color: #494949;
   vertical-align: text-bottom;
   font-size: 24px;
   padding-right: 10px;
   cursor: pointer;
 }
 .button--delete-icon:hover, .button--delete-icon:focus {
-  color: #F18989;
+  color: #ad2d2d;
 }
 .button--delete {
   display: block;
   float: right;
-  background: #F18989;
+  background: #ad2d2d;
   border-radius: 4px;
   width: 124px;
   height: 40px;
   color: #fff;
 }
 .button--delete:hover, .button--delete:focus {
-  background: #F18989;
+  background: #d8544a;
 }
 .nav__tabs {
   display:grid;
@@ -95,7 +98,7 @@
   outline: none;
 }
 .input:hover, .input:focus {
-  border: 1px solid #6DA6F2
+  border: 1px solid #5f93d8
 }
 .input--large {
   padding-left: 12px;
@@ -105,6 +108,7 @@
 .main {
   clear: both;
   margin: auto;
+  padding-top: 20px;
   width: 600px;
   min-height: 100vh;
 }
@@ -120,7 +124,12 @@
   color: #000000;
 }
 .item {
-  margin-top: 20px;
+  margin-top: 15px;
+}
+.label {
+  vertical-align: text-top;
+  display: inline-block;
+  width: 80%;
 }
 .span--line-through {
   text-decoration: line-through;
@@ -134,7 +143,6 @@
 .icon--delete {
   vertical-align: text-top;
   font-size: 16px;
-  margin-right: 5px;
 }
 .icon--no-select {
   -webkit-touch-callout: none; /* iOS Safari */
@@ -157,7 +165,7 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
-  color: #A9A9A9;
+  color: #494949;
 }
 @media only screen and (max-width: 400px) {
   .footer, .header, .input--large, .button--delete, .nav__tabs, .button--primary, .main, .content {
