@@ -6,13 +6,11 @@ Created by Zachary Sarette
 
 A todo list app created with React JS
 
-__Mobile Screen shot:__
+| __Mobile Screen shot:__ | __Desktop Screen shot:__ |
 
-![A screenshot of Super Todo List mobile version ](./ScreenShots/SuperTodoMobileScreenShot.png)
+| --- | --- |
 
-__Desktop Screen shot:__
-
-![A screenshot of Super Todo List desktop version ](./ScreenShots/SuperTodoDesktopScreenShot.png)
+| ![A screenshot of Super Todo List mobile version ](./ScreenShots/SuperTodoMobileScreenShot.png) | ![A screenshot of Super Todo List desktop version ](./ScreenShots/SuperTodoDesktopScreenShot.png) |
 
 ### The Process
 
