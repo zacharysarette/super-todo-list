@@ -17,42 +17,37 @@ __Desktop Screen shot:__
 ### The Process
 
   1. Used some tutorials to make a basic todo list without styling
-    - Todolist state
-    - add/remove and complete todos
-    - 3 components
-      - App
-      - Todolist
-      - Todo
-
+    * Todolist state
+    * add/remove and complete todos
+    * 3 components
+      * App
+      * Todolist
+      * Todo
   2. Added tab navigation
-    - Added currentPage to state
-    - Updated the UI based the currentPage
-
+    * Added currentPage to state
+    * Updated the UI based the currentPage
   3. Updated my CSS to use BEM
-    - Went through each component starting at the top 
-    - Refactored CSS splitting up the common styles
-
+    * Went through each component starting at the top 
+    * Refactored CSS splitting up the common styles
   4. Split code into more components and organized with folders
-    - Buttons
-    - Navbar
-    - Header
-    - Checkboxes
-    - AddBar
-    - const
-    - utils
-
+    * Buttons
+    * Navbar
+    * Header
+    * Checkboxes
+    * AddBar
+    * const
+    * utils
   5. Responsiveness and Accessibility
-    - Used buttons
-    - Used Semantic HTML tags
-    - Background/Foreground contrast check
-    - Using keyboard for entering todos
-
+    * Used buttons
+    * Used Semantic HTML tags
+    * Background/Foreground contrast check
+    * Using keyboard for entering todos
   6. Refactoring
-    - Use of arrow functions throughout the code
-    - Extract code into const and util libraries
-    - Break up components into more pieces
-    - Extract Text from UI into a const file
-    - Use object destructuring
+    * Use of arrow functions throughout the code
+    * Extract code into const and util libraries
+    * Break up components into more pieces
+    * Extract Text from UI into a const file
+    * Use object destructuring
 
 
 ### What I learned
