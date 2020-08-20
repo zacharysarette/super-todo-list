@@ -8,7 +8,7 @@ const TopBar = ({currentPage, todosEmpty, setTodos, clearTodos}) => {
 
   const todoNameRef = useRef()
 
-  const { addTodo, deleteAll } = TextContent
+  const { addTodo, deleteAll, addTodoLabel} = TextContent
 
   const handleAddTodo = () => {
     const name = todoNameRef.current.value
@@ -31,6 +31,7 @@ const TopBar = ({currentPage, todosEmpty, setTodos, clearTodos}) => {
           <>
             <AddBar
               addText={addTodo}
+              label={addTodoLabel}
               reference={todoNameRef}
               onClick={() => handleAddTodo()}
             />

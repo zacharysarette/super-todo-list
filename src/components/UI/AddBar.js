@@ -1,11 +1,18 @@
 import React from 'react'
 import ButtonPrimary from '../buttons/ButtonPrimary'
+import InputTextLarge from '../inputs/InputTextLarge'
 
-const AddBar = ({ addText, reference, onClick }) => {
+const AddBar = ({ addText, label, reference, onClick }) => {
   return (
     <>
-      <input className='input input--large' ref={reference} type="text" />
-      <ButtonPrimary text={addText} onClick={onClick} />
+      <InputTextLarge
+        label ={label}
+        reference ={reference}
+      />
+      <ButtonPrimary
+        text={addText}
+        onClick={onClick}
+      />
     </>
   )
 }

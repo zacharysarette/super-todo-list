@@ -37,10 +37,17 @@
 .button--primary:hover, .button--primary:focus {
   background: #5f93d8;
 }
+.button--primary:focus {
+  outline: dashed #2d5cc2;
+}
 .button__tab {
   background: none;
 }
-.button__tab:hover > div, .div__indicator {
+.button__tab:focus {
+  outline: dashed #2d5cc2;
+}
+.button__tab:hover > div, .div__indicator,
+.button__tab:focus > div, .div__indicator {
   background: #2d5cc2;
   height: 2px;
   border-radius: 4px 4px 0px 0px;
@@ -64,6 +71,7 @@
 }
 .button--delete-icon:hover, .button--delete-icon:focus {
   color: #ad2d2d;
+  outline: dashed #ad2d2d;
 }
 .button--delete {
   display: block;
@@ -76,6 +84,9 @@
 }
 .button--delete:hover, .button--delete:focus {
   background: #d8544a;
+}
+.button--delete:focus {
+  outline: dashed #ad2d2d;
 }
 .nav__tabs {
   display:grid;
@@ -94,16 +105,27 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;
-  color: #828282;
+  color: #323232;
   outline: none;
 }
 .input:hover, .input:focus {
-  border: 1px solid #5f93d8
+  border: 2px solid #5f93d8
+}
+.input:focus {
+  outline: dashed #2d5cc2;
 }
 .input--large {
   padding-left: 12px;
   width: 476px;
   height: 56px;
+}
+.label__text-input {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 15px;
 }
 .main {
   clear: both;
@@ -140,6 +162,9 @@
   border-radius: 4px;
   margin-right: 10px;
 }
+.checkBox:focus {
+  outline: dashed #2d5cc2;
+}
 .icon--delete {
   vertical-align: text-top;
   font-size: 16px;
@@ -167,7 +192,7 @@
   line-height: 17px;
   color: #494949;
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 768px) {
   .footer, .header, .input--large, .button--delete, .nav__tabs, .button--primary, .main, .content {
     width: 100%;
     margin: 0px;

@@ -1,7 +1,8 @@
 const TextContent = {
   title: 'Super Todo List',
   footer: 'Zachary Sarette 2020',
-  addTodo: 'Add Todo',
+  addTodo: 'Add',
+  addTodoLabel: 'Add a Todo',
   deleteAll: 'Delete All'
 }
 
