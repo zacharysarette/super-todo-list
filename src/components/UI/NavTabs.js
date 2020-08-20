@@ -10,12 +10,13 @@ const NavTabs = ({ currentPage, setCurrentPage }) => {
 
   return (
     <nav className='nav__tabs'>
-      {PageNames.map(pageName => (
+      {PageNames.map((pageName, index) => (
         <ButtonNavTab
           key={pageName}
           text={pageName}
           onClick={() => handleNavClick(pageName)}
           indicatorClass={getDivIndicatorClass(pageName)}
+          buttonTabIndex={index + 1}
         />
       ))}
     </nav>
