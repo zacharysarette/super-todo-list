@@ -16,7 +16,6 @@ const NavTabs = ({ currentPage, setCurrentPage }) => {
           text={pageName}
           onClick={() => handleNavClick(pageName)}
           indicatorClass={getDivIndicatorClass(pageName)}
-          buttonTabIndex={index + 1}
         />
       ))}
     </nav>

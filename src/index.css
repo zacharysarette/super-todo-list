@@ -119,18 +119,23 @@
   width: 476px;
   height: 56px;
 }
+.label {
+  vertical-align: text-top;
+  display: inline-block;
+  width: 80%;
+}
 .label__text-input {
   font-family: Montserrat;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
-  margin-bottom: 15px;
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 .main {
   clear: both;
   margin: auto;
-  padding-top: 20px;
   width: 600px;
   min-height: 100vh;
 }
@@ -147,11 +152,6 @@
 }
 .item {
   margin-top: 15px;
-}
-.label {
-  vertical-align: text-top;
-  display: inline-block;
-  width: 80%;
 }
 .span--line-through {
   text-decoration: line-through;

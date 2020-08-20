@@ -33,11 +33,11 @@ const App = () => {
   return (
     <>
       <Header text={title} />
+      <main className='main'>
       <NavTabs
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
       />
-      <main className='main'>
       <TopBar
         currentPage={currentPage}
         todosEmpty={() => todosEmpty()}
