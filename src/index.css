@@ -92,6 +92,7 @@
   display:grid;
   grid-template-columns: auto auto auto;
   margin: auto;
+  margin-bottom: 20px;
   width: 600px;
   border-bottom: 1px solid #BDBDBD;
   text-align: center;
@@ -130,7 +131,7 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 5px;
 }
 .main {
