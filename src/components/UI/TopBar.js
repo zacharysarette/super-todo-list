@@ -4,11 +4,11 @@ import ButtonDelete from '../buttons/ButtonDelete'
 import TextContent from '../../const/TextContent'
 import { v4 as uuidv4 } from 'uuid'
 
-const TopBar = ({currentPage, todosEmpty, setTodos, clearTodos}) => {
+const TopBar = ({ currentPage, todosEmpty, setTodos, clearTodos }) => {
 
   const todoNameRef = useRef()
 
-  const { addTodo, deleteAll, addTodoLabel} = TextContent
+  const { addTodo, deleteAll, addTodoLabel } = TextContent
 
   const handleAddTodo = () => {
     const name = todoNameRef.current.value
@@ -21,27 +21,23 @@ const TopBar = ({currentPage, todosEmpty, setTodos, clearTodos}) => {
     return
   }
 
-  document.addEventListener('keyup', (e) => {
-    if (e.code === "Enter") handleAddTodo()
-  })
-
   return (
     <>
-        {currentPage !== 'Completed' &&
-          <>
-            <AddBar
-              addText={addTodo}
-              label={addTodoLabel}
-              reference={todoNameRef}
-              onClick={() => handleAddTodo()}
-            />
-            <br />
-            <br />
-          </>
-        }
-        {currentPage === 'Completed' && todosEmpty() &&
-          <ButtonDelete text={deleteAll} onClick={() => clearTodos()} />
-        }
+      {currentPage !== 'Completed' &&
+        <>
+          <AddBar
+            addText={addTodo}
+            label={addTodoLabel}
+            reference={todoNameRef}
+            onClick={() => handleAddTodo()}
+          />
+          <br />
+          <br />
+        </>
+      }
+      {currentPage === 'Completed' && todosEmpty() &&
+        <ButtonDelete text={deleteAll} onClick={() => clearTodos()} />
+      }
     </>
   )
 }

@@ -3,17 +3,22 @@ import ButtonPrimary from '../buttons/ButtonPrimary'
 import InputTextLarge from '../inputs/InputTextLarge'
 
 const AddBar = ({ addText, label, reference, onClick }) => {
+  const handleOnSubmit = e => {
+    e.preventDefault()
+    onClick()
+    return
+  }
   return (
-    <>
+    <form onSubmit={handleOnSubmit}>
       <InputTextLarge
-        label ={label}
-        reference ={reference}
+        label={label}
+        reference={reference}
       />
       <ButtonPrimary
         text={addText}
-        onClick={onClick}
+        onClick={() => null}
       />
-    </>
+    </form>
   )
 }
 
