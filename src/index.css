@@ -122,8 +122,11 @@
 }
 .label {
   vertical-align: text-top;
-  display: inline-block;
-  width: 80%;
+  word-break: break-all;
+}
+.checkbox__label {
+  display: flex;
+  justify-content: space-between;
 }
 .label__text-input {
   font-family: Montserrat;
@@ -152,6 +155,8 @@
   color: #000000;
 }
 .item {
+  display: flex;
+  justify-content: space-between;
   margin-top: 15px;
 }
 .span--line-through {
