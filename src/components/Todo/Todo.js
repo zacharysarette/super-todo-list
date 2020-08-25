@@ -8,7 +8,7 @@ const Todo = ({ todo, toggleTodo, removeTodo }) => {
 
   const handleDeleteClick = () => removeTodo(todo.id)
 
-  const getLabelClassName = () => todo.complete ? 'span--line-through' : ''
+  const getLabelClassName = () => todo.complete ? ' span--line-through' : ''
 
   return (
     <article className='item'>
