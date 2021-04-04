@@ -20,6 +20,8 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#2d5cc2",
+  "background_color": "#ffffff",
+  "scope": ".",
+  "description":"A simple Todo List App."
 }
